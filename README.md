@@ -1,5 +1,3 @@
-DBT Banxware Assignment
-
 ### How To Run The Project
 
 STEP 1 (Set up your environment):
