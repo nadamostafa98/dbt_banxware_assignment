@@ -1,3 +1,19 @@
-select customer_id, name from raw_customers_data join (select count(customer_id)as amount, customer_id from transformed_sales_data where order_month = 10 and order_year = 2023 group by customer_id)on id= customer_id
-and amount = (select max(amount) from (select count(customer_id) as amount, customer_id from transformed_sales_data where order_month = 10 and order_year = 2023 group by customer_id));
-
+SELECT customer_id,
+       name
+FROM raw_customers_data
+    JOIN
+        (SELECT count(customer_id)AS amount,
+          customer_id
+        FROM transformed_sales_data
+        WHERE order_month = 10 AND order_year = 2023
+        GROUP BY customer_id)
+    ON id = customer_id
+    AND amount =
+        (SELECT max(amount)
+        FROM
+            (SELECT count(customer_id) AS amount,
+             customer_id
+            FROM transformed_sales_data
+            WHERE order_month = 10
+            AND order_year = 2023
+            GROUP BY customer_id));

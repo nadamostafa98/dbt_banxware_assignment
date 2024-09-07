@@ -1,1 +1,11 @@
-select name from raw_customers_data join (select customer_id, sum(total_amount) as total_sales_amount from transformed_sales_data where order_year = 2023 group by customer_id ) where customer_id = id order by total_sales_amount desc limit 5;
+SELECT name
+FROM raw_customers_data
+JOIN
+  (SELECT customer_id,
+          sum(total_amount) AS total_sales_amount
+   FROM transformed_sales_data
+   WHERE order_year = 2023
+   GROUP BY customer_id)
+WHERE customer_id = id
+ORDER BY total_sales_amount DESC
+LIMIT 5;
