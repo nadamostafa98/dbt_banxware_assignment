@@ -8,14 +8,14 @@ STEP 1 (Set up your environment):
     dbt_banxware_assignment:
       outputs:
         dev:
-          account: <snowflake account name>
+          account: <snowflake_account_name>
           database: HOME_ASSIGNMENT
-          password: <snowflake account password>
-          role: <snowflake role>
-          schema: <your schema name>
+          password: <snowflake_account_password>
+          role: <snowflake_role>
+          schema: <your_schema_name>
           threads: 4
           type: snowflake
-          user: <your username>
+          user: <your_username>
           warehouse: COMPUTE_WH
       target: dev
   
