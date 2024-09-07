@@ -3,8 +3,8 @@
 ### 1) Setting Up The Environment:
    - STEP 1: I created a snowflake account and created the database called _home_assignment_ and a schema which I called _dummy_company_.
    - STEP 2: I installed dbt on my Linux OS using pip to create a virtual environment then installed dbt-core and dbt-snowflake.
-   - STEP 3: I created a .dbt folder in my home.
-   - STEP 4: I ran **dbt init** command and initiated a connection with the _home_assignment_ database on snowflake and created the project _dbt_banxware_assignment_.
+   - STEP 3: I created a .dbt folder in my home (where the _profiles.yml_ file will be created).
+   - STEP 4: I ran **dbt init** command and filled in the required information that was used to create _profiles.yml_ , created the project _dbt_banxware_assignment_ and initiated a connection with the _home_assignment_ database on snowflake.
    - STEP 5: I decided to use VS Code and opened the project on it, activated the dbt environment and ran **dbt debug** to test the connection with snowflake.
    
    Problems I faced:
