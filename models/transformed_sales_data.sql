@@ -1,6 +1,14 @@
+/* To materialize the result as a table in the database*/
+
 {{ config(materialized='table') }}
 
+/* Transformation query */ 
+
 with transform_sales as (
+
+
+/* order_date datatype is first changed from varchar to date then we extract the day, month and year.
+   total sales amount for each order  = quantity * price */
 
 SELECT ORDER_ID,
        DAY (date(order_date)) AS order_day,
