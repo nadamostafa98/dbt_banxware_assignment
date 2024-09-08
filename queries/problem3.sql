@@ -2,7 +2,6 @@
 
 /* The average order value for each month in 2023 is calculated, then the result is ordered ascendingly for easier navigation */
 
-
 SELECT order_month,
        avg(total_amount) AS average
 FROM transformed_sales_data
